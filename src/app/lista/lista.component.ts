@@ -15,9 +15,22 @@ export class ListaComponent implements OnInit {
   constructor(private productoService: ProductoService) { }
 
   ngOnInit(): void {
-    this.productoService.obtenerProductos().subscribe(respuesta => {
+    this.productoService.obtenerProductos1().subscribe(respuesta => {
       this.dataSource = respuesta as any
     })
+
+    setTimeout(() => {
+      this.productoService.obtenerProductos2().subscribe(respuesta => {
+        this.dataSource = this.dataSource.concat(respuesta as any)
+      })
+    }, 1500)
+
+    setTimeout(() => {
+      this.productoService.obtenerProductos3().subscribe(respuesta => {
+        this.dataSource = this.dataSource.concat(respuesta as any)
+      })
+    }, 3000)
+    
   }
 
 }

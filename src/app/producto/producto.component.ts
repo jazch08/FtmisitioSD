@@ -28,7 +28,7 @@ export class ProductoComponent implements OnInit {
     let params = this.activatedRoute.snapshot.params
     let id = params['id']
 
-    this.productoService.obtenerProductoPorId(id).subscribe(respuesta => {
+    this.productoService.obtenerProductoPorId1(id).subscribe(respuesta => {
       this.item = respuesta as Producto
     })
   }
