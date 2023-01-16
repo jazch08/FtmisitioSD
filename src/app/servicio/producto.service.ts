@@ -9,27 +9,27 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   obtenerProductos1() {
-    return this.http.get('http://localhost:3000/api/productos1')
+    return this.http.get('http://52.87.156.147:3000/api/productos1')
   }
 
   obtenerProductoPorId1(id: number) {
-    return this.http.get('http://localhost:3000/api/productos1/'+id.toString())
+    return this.http.get('http://52.87.156.147:3000/api/productos1/'+id.toString())
   }
   
   obtenerProductos2() {
-    return this.http.get('http://localhost:3000/api/productos2')
+    return this.http.get('http://52.87.156.147:3000/api/productos2')
   }
 
   obtenerProductoPorId2(id: number) {
-    return this.http.get('http://localhost:3000/api/productos2/'+id.toString())
+    return this.http.get('http://52.87.156.147:3000/api/productos2/'+id.toString())
   }
 
   obtenerProductos3() {
-    return this.http.get('http://localhost:3000/api/productos3')
+    return this.http.get('http://52.87.156.147:3000/api/productos3')
   }
 
   obtenerProductoPorId3(id: number) {
-    return this.http.get('http://localhost:3000/api/productos4/'+id.toString())
+    return this.http.get('http://52.87.156.147/:3000/api/productos4/'+id.toString())
   }
 
 }
